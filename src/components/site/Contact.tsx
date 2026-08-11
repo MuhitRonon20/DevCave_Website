@@ -53,12 +53,15 @@ export function Contact() {
   // the "I" IS the button: it drops first, then morphs into a pill (px, derived from word size)
   const barY = useTransform(p, [0.34, 0.6], [0, unit * 1.05]);
   const barW = useTransform(p, [0.62, 0.78], [unit * 0.2, unit * 1.7]);
-  const barH = useTransform(p, [0.62, 0.78], [unit * 0.78, unit * 0.24]);
+  const barH = useTransform(p, [0.62, 0.78], [unit * 0.72, unit * 0.24]);
   const barR = useTransform(p, [0.62, 0.78], [unit * 0.02, unit * 0.2]);
   const barRotate = useTransform(p, [0.34, 0.47, 0.6], [0, -8, 0]);
   const fillOpacity = useTransform(p, [0.6, 0.74], [0, 1]);
   const labelOpacity = useTransform(p, [0.76, 0.86], [0, 1]);
   const wordScale = useTransform(p, [0, 0.5, 1], [0.9, 1, 1.04]);
+  // the "I" reveals in step with the other letters before it drops
+  const iOpacity = useTransform(p, [0.12, 0.3], [0, 1]);
+  const iEnter = useTransform(p, [0.12, 0.34], ["110%", "0%"]);
 
 
 
@@ -95,8 +98,12 @@ export function Contact() {
               <Letter char="U" index={1} progress={p} />
 
               {/* the "I" — it IS the button: drops down, then morphs into the pill */}
-              <span className="relative inline-block w-[0.2em] self-stretch">
-                <span className="pointer-events-auto absolute top-[0.1em] left-1/2 z-30">
+              <span className="relative inline-block align-bottom">
+                <span className="invisible" aria-hidden>I</span>
+                <motion.span
+                  style={{ opacity: iOpacity, y: iEnter }}
+                  className="pointer-events-auto absolute top-0 left-1/2 z-30 flex leading-none"
+                >
                 <Magnetic strength={dropped ? 0.3 : 0}>
                   <motion.button
                     type="button"
@@ -130,7 +137,7 @@ export function Contact() {
                     </motion.span>
                   </motion.button>
                 </Magnetic>
-                </span>
+                </motion.span>
               </span>
 
 
