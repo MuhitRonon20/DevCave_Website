@@ -33,7 +33,9 @@ function Index() {
   return (
     <main>
       <Preloader />
+      <FluidBackground />
       <ScrollProgress />
+
       <Nav />
       <Hero />
       <Awards />
