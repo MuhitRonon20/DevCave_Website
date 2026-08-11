@@ -7,6 +7,7 @@ import { Projects } from "@/components/site/Projects";
 import { Contact } from "@/components/site/Contact";
 import { ScrollProgress } from "@/components/site/motion-primitives";
 import { useSmoothScroll } from "@/components/site/useLenis";
+import { FluidBackground } from "@/components/site/webgl/FluidBackground";
 
 const title = "UpSunrise — Brand, Web & Motion Design Studio";
 const description =
@@ -32,7 +33,9 @@ function Index() {
   return (
     <main>
       <Preloader />
+      <FluidBackground />
       <ScrollProgress />
+
       <Nav />
       <Hero />
       <Awards />
