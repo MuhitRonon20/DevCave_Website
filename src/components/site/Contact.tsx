@@ -53,7 +53,7 @@ export function Contact() {
   // the "I" IS the button: it drops first, then morphs into a pill (px, derived from word size)
   const barY = useTransform(p, [0.34, 0.6], [0, unit * 1.05]);
   const barW = useTransform(p, [0.62, 0.78], [unit * 0.2, unit * 1.7]);
-  const barH = useTransform(p, [0.62, 0.78], [unit * 0.78, unit * 0.24]);
+  const barH = useTransform(p, [0.62, 0.78], [unit * 0.72, unit * 0.24]);
   const barR = useTransform(p, [0.62, 0.78], [unit * 0.02, unit * 0.2]);
   const barRotate = useTransform(p, [0.34, 0.47, 0.6], [0, -8, 0]);
   const fillOpacity = useTransform(p, [0.6, 0.74], [0, 1]);
