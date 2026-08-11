@@ -59,6 +59,9 @@ export function Contact() {
   const fillOpacity = useTransform(p, [0.6, 0.74], [0, 1]);
   const labelOpacity = useTransform(p, [0.76, 0.86], [0, 1]);
   const wordScale = useTransform(p, [0, 0.5, 1], [0.9, 1, 1.04]);
+  // the "I" reveals in step with the other letters before it drops
+  const iOpacity = useTransform(p, [0.12, 0.3], [0, 1]);
+  const iEnter = useTransform(p, [0.12, 0.34], ["110%", "0%"]);
 
 
 
