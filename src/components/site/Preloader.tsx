@@ -27,7 +27,7 @@ export function Preloader() {
             >
               <SunMark className="h-10 w-16 text-ink" />
             </motion.span>
-            <div className="overflow-hidden py-1">
+            <div className="overflow-hidden pt-1 pb-3">
               <motion.span
                 className="block font-display text-4xl leading-[1.15] tracking-tight text-ink sm:text-5xl"
                 initial={{ y: "110%" }}
