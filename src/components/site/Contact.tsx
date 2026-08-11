@@ -95,7 +95,8 @@ export function Contact() {
               <Letter char="U" index={1} progress={p} />
 
               {/* the "I" — it IS the button: drops down, then morphs into the pill */}
-              <span className="relative inline-block h-[0.72em] w-[0.2em] self-baseline">
+              <span className="relative inline-block align-bottom">
+                <span className="invisible" aria-hidden>I</span>
                 <span className="pointer-events-auto absolute top-0 left-1/2 z-30">
                 <Magnetic strength={dropped ? 0.3 : 0}>
                   <motion.button
