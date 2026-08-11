@@ -137,7 +137,7 @@ export function Contact() {
                     </motion.span>
                   </motion.button>
                 </Magnetic>
-                </span>
+                </motion.span>
               </span>
 
 
