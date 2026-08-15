@@ -99,44 +99,22 @@ export function Hero() {
           </Line>
 
           <Line delay={2.09}>
-            <span>Making them</span>
-            <span className="inline-flex items-center gap-[0.08em]">
-              <Tile src={tileOne} className="w-[1.05em]" />
-              <Tile src={tileTwo} className="w-[1.05em]" />
-              <Tile src={tileThree} className="w-[1.05em]" />
-            </span>
-            <span>matter</span>
+            <span>Making them matter</span>
           </Line>
 
           <Line delay={2.18}>
-            <span>is our craft</span>
-            <svg
-              viewBox="0 0 120 46"
-              aria-hidden
-              className="h-[0.42em] w-[1.5em] text-sun"
-              fill="none"
-            >
-              <motion.path
-                d="M4 30C22 6 52 4 62 18c6 9-6 20-14 15-9-6 4-19 24-19 14 0 22 6 32 12"
-                stroke="currentColor"
-                strokeWidth="4"
-                strokeLinecap="round"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ delay: 2.6, duration: 1.1, ease }}
-              />
-              <motion.path
-                d="M96 32l14 2-8 10"
-                stroke="currentColor"
-                strokeWidth="4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 3.6, duration: 0.3 }}
-              />
-            </svg>
+            <span>is</span>
+            <span className="inline-flex items-center gap-[0.06em]">
+              <Robot index={0} />
+              <Robot index={1} />
+              <Robot index={2} />
+            </span>
           </Line>
+
+          <Line delay={2.27}>
+            <span>our craft</span>
+          </Line>
+
         </h1>
 
         <motion.div
