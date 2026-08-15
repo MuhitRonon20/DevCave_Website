@@ -3,7 +3,6 @@ import { useRef } from "react";
 import tileOne from "@/assets/project-1.jpg";
 import tileTwo from "@/assets/work-brand.jpg";
 import tileThree from "@/assets/project-3.jpg";
-import tileWide from "@/assets/work-web.jpg";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -58,17 +57,21 @@ export function Hero() {
 
         <h1 className="font-display text-[clamp(2.6rem,8.5vw,7rem)] leading-[1.02] tracking-[-0.04em] text-ink">
           <Line delay={2}>
-            <span>We</span>
+            <span>Ideas are easy.</span>
+          </Line>
+
+          <Line delay={2.09}>
+            <span>Making them</span>
             <span className="inline-flex items-center gap-[0.08em]">
               <Tile src={tileOne} className="w-[1.05em]" />
               <Tile src={tileTwo} className="w-[1.05em]" />
               <Tile src={tileThree} className="w-[1.05em]" />
             </span>
-            <span>turn great</span>
+            <span>matter</span>
           </Line>
 
-          <Line delay={2.09}>
-            <span>ideas into</span>
+          <Line delay={2.18}>
+            <span>is our craft</span>
             <svg
               viewBox="0 0 120 46"
               aria-hidden
@@ -95,13 +98,6 @@ export function Hero() {
                 transition={{ delay: 3.6, duration: 0.3 }}
               />
             </svg>
-            <span>brands</span>
-          </Line>
-
-          <Line delay={2.18}>
-            <span>people</span>
-            <Tile src={tileWide} className="w-[2.1em]" />
-            <span>remember</span>
           </Line>
         </h1>
 
